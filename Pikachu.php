@@ -14,7 +14,10 @@
 
 		public function FunctionName()
 		{
-
+			public function FunctionName($value='')
+			{
+				# code...
+			}
 		}
 	}
 
