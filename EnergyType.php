@@ -7,9 +7,9 @@
 	{
 		public $type;
 
-		public function FunctionName()
+		public function EnergyType()
 		{
-			# code...
+
 		}
 	}
 

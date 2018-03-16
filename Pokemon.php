@@ -13,7 +13,7 @@
 		public $Attacks;
 		public $Resistance;		
 
-		public function Attack()
+		public function Pokemon()
 		{
 			
 		}

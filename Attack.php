@@ -8,10 +8,9 @@
 		public $name;
 		public $damage;
 
-		public function FunctionName($name, $damage)
+		public function Attack($name, $damage)
 		{
-			$this->name = "";
-			$this->damage = "";
+
 		}
 	}
 

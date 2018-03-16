@@ -12,12 +12,9 @@
 		public $Attacks;
 		public $Resistance;	
 
-		public function FunctionName()
+		public function Pikachu()
 		{
-			public function FunctionName($value='')
-			{
-				# code...
-			}
+
 		}
 	}
 

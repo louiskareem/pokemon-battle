@@ -6,8 +6,9 @@
 	class Weakness
 	{
 		public $EnergyType;
+		public $multiplier;
 
-		public function FunctionName()
+		public function Weakness()
 		{
 			# code...
 		}

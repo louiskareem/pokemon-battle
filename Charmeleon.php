@@ -13,7 +13,7 @@
 		public $Attacks;
 		public $Resistance;	
 
-		public function FunctionName()
+		public function Charmeleon()
 		{
 			# code...
 		}
