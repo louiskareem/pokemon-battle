@@ -10,7 +10,7 @@
 		
 		public function Resistance($type)
 		{
-			var_dump('expression');
+			var_dump('');
 		}
 	}
 
