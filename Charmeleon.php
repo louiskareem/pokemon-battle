@@ -1,5 +1,10 @@
 <?php
 
+	// use Attack;
+	// use Weakness;
+	// use Resistance;
+	// use EnergyType;
+
 	/**
 	* 
 	*/
@@ -7,15 +12,24 @@
 	{
 		
 		public $name;
-		public $EnergyType = "Fire";
+		public $energy_type = "Fire";
 		public $hitpoints = 60;
-		public $Weakness;
-		public $Attacks;
-		public $Resistance;	
+		public $weakness;
+		public $attacks;
+		public $resistance;	
 
-		public function Charmeleon()
+		public function __construct($name)
 		{
-			# code...
+			$this->name = $name;
+		}
+
+		public function battle_moves()
+		{
+
+			$Weakness->EnergyType = "Water";
+			$Weakness->multiplier = 2;
+			$Resistance->EnergyType = "Lighting";
+			$Resistance->worth = 10;
 		}
 
 	}

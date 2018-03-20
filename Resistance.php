@@ -6,11 +6,11 @@
 	class Resistance
 	{
 		public $EnergyType;
-		public $worth;
+		public $worth = 0;
 		
-		public function Resistance()
+		public function Resistance($type)
 		{
-			# code...
+			
 		}
 	}
 

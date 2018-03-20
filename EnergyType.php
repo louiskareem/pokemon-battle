@@ -3,13 +3,13 @@
 	/**
 	* 
 	*/
-	class EnergyType
+	class EnergyType 
 	{
-		public $type;
+		public $name;
 
-		public function EnergyType()
+		public function __construct($name)
 		{
-
+			$this->name = $name;
 		}
 	}
 

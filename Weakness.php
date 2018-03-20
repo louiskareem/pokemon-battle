@@ -8,9 +8,9 @@
 		public $EnergyType;
 		public $multiplier;
 
-		public function Weakness()
+		public function Weakness($EnergyType, $multiplier)
 		{
-			# code...
+			
 		}
 	}
 
