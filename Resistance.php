@@ -1,16 +1,16 @@
 <?php
-
 	/**
 	* 
 	*/
 	class Resistance
 	{
-		public $EnergyType;
+		public $energyType;
 		public $worth = 0;
 		
-		public function Resistance($type)
+		public function __construct($energyType, $worth)
 		{
-			var_dump('');
+			$this->energyType = $energyType;
+			$this->worth = $worth;
 		}
 	}
 

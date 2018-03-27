@@ -1,40 +1,25 @@
 <?php
 
-	// use Attack;
-	// use Weakness;
-	// use Resistance;
-	// use EnergyType;
+	// require 'Weakness.php';
+	// require 'Attack.php';
+	// require 'EnergyType.php';
+	// require 'Resistance.php';
 
 	/**
 	* 
 	*/
 	class Pikachu extends Pokemon
 	{
-		// public $name;
-		public $energy_type = "Lighting";
-		public $hitpoints = 0;
-		// public $weakness;
-		// public $attacks;
-		// public $resistance;	
-
-		public function __construct($name, $energy_type, $hitpoints)
+		public function __construct($name)
 		{
-			parent::__construct($name, $energy_type, $hitpoints);
-		}
+			$name = $name;
+			$energyType = new EnergyType('Lighting');
+			$hitpoints = 60;
+			$attacks = [new Attack('electricRing', 50), new Attack('pikaPunch', 20)];
+			$weakness = new Weakness(new EnergyType('Fire'), 1.5);
+			$resistance = new Resistance(new EnergyType('Fighting'), 20);
 
-		public function battle_moves()
-		{
-			$attacks = [
-				'name' => electricRing, 
-				'damage' => 50, 
-				'name' => pikaPunch,
-				'damage' => 20
-			];
-
-			$weakness->EnergyType = "Fire";
-			$weakness->multiplier = 1.5;
-			$resistance->EnergyType = "Fighting";
-			$resistance->worth = 20;
+			parent::__construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance);
 		}
 	}
 

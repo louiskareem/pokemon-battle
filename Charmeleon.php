@@ -1,37 +1,26 @@
 <?php
 
-	// use Attack;
-	// use Weakness;
-	// use Resistance;
-	// use EnergyType;
+	// require 'Weakness.php';
+	// require 'Attack.php';
+	// require 'EnergyType.php';
+	// require 'Resistance.php';
 
 	/**
 	* 
 	*/
 	class Charmeleon extends Pokemon
-	{
-		
-		public $name;
-		public $energy_type = "Fire";
-		public $hitpoints = 60;
-		public $weakness;
-		public $attacks;
-		public $resistance;	
-
+	{	
 		public function __construct($name)
 		{
-			$this->name = $name;
+			$name = $name;
+			$energyType = new EnergyType('Fire');
+			$hitpoints = 60;
+			$attacks = [new Attack('headButt', 10), new Attack('Flare', 30)];
+			$weakness = new Weakness(new EnergyType('Water'), 2);
+			$resistance = new Resistance(new EnergyType('Lighting'), 10);
+
+			parent::__construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance);
 		}
-
-		public function battle_moves()
-		{
-
-			$Weakness->EnergyType = "Water";
-			$Weakness->multiplier = 2;
-			$Resistance->EnergyType = "Lighting";
-			$Resistance->worth = 10;
-		}
-
 	}
 
 ?>

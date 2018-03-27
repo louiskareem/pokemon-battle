@@ -4,14 +4,13 @@ require 'Pokemon.php';
 require 'Pikachu.php';
 require 'Charmeleon.php';
 
-	// $pikachu = new Pikachu('Pikachu', 'Lighting', 60);
-	// $pikachu->weakness = ['Fire', 1.5];
-	// $pikachu->attacks = ['electricRing', 50, 'pikaPunch', 20];
-	// $pikachu->resistance = ['Fighting', 20];
+	$pikachu = new Pikachu('Pikachulu');
+	$charmeleon = new Charmeleon('Charmy');
+	
+	$pikachu->attack($pikachu->attacks[0], $charmeleon);
+	// $charmeleon->attack($charmeleon->attacks[1], $pikachu);
 
-	// return $pikachu;
-
-	$array = array('hello', 'bye');
-	var_dump($array);
+	// print_r ($pikachu->attack($pikachu->attacks[0], $charmeleon));
+	// print_r ($charmeleon->attack($charmeleon->attacks[1], $pikachu));
 
 ?>
