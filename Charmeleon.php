@@ -1,15 +1,14 @@
 <?php
 
-	// require 'Weakness.php';
-	// require 'Attack.php';
-	// require 'EnergyType.php';
-	// require 'Resistance.php';
-
 	/**
-	* 
+	* Class of Charmeleon extending Pokemon (the parent class).
 	*/
 	class Charmeleon extends Pokemon
 	{	
+		/**
+		 * [Charmeleon's constructor]
+		 * @param [type] $name [description]
+		 */
 		public function __construct($name)
 		{
 			$name = $name;

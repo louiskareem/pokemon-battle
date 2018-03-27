@@ -6,7 +6,7 @@
 	require 'Resistance.php';
 
 	/**
-	* 
+	* The parent class Pokemon
 	*/
 	class Pokemon
 	{
@@ -18,6 +18,15 @@
 		public $weakness;
 		public $resistance;		
 
+		/**
+		 * [Constructor for a Pokemon]
+		 * @param [type] $name       [description]
+		 * @param [type] $energyType [description]
+		 * @param [type] $hitpoints  [description]
+		 * @param [type] $attacks    [description]
+		 * @param [type] $weakness   [description]
+		 * @param [type] $resistance [description]
+		 */
 		public function __construct($name, $energyType, $hitpoints, $attacks, $weakness, $resistance)
 		{
 			$this->name = $name;
@@ -29,7 +38,12 @@
 			$this->resistance = $resistance;
 		}
 
-
+		/**
+		 * [Attack method/function. This method/function returns the health of a Pokemon before and after the attack.]
+		 * @param  [type] $attack [description]
+		 * @param  [type] $target [description]
+		 * @return [type]         [description]
+		 */
 		public function attack($attack, $target)
 		{
 			$damage = $attack->damage;
@@ -40,13 +54,9 @@
 			}
 
 			if ($target->weakness->energyType == $this->energyType) {
-
 				$damage = $attack->damage * $target->weakness->multiplier;
-
 			}elseif ($target->resistance->energyType == $this->energyType) {
-
 				$damage = $attack->damage - $target->resistance->worth;
-
 			}
 
 			if (isset($damage)) {
@@ -54,10 +64,6 @@
 				print_r ('<h2>' . 'But after getting attacked by ' . $this->name . '\'s ' . 'powerful ' . $attack->name . '. ' . $target->name  . '\'s health decreased to ' . $result . ' points.' . '</h2>');
 			}
 		}
-
-		// public function takeDamage($damage)
-		// {
-		// 	$damage = $this->health - $damage;
-		// }
 	}
+	
 ?>
